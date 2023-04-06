@@ -56,5 +56,42 @@ const recorreArray = arr => arr.forEach(i => {  // RECORRIDO CON FOR EACH
 
 recorreArray(dadoElArray);
 
+const numerosIncrementados = dadoElArray.map(function(x) {
+    return x + 1;
+})
+console.log(numerosIncrementados);
+
+const sumaIncrementados = (accumulator, currentValue) => accumulator + currentValue;
+console.log(numerosIncrementados.reduce(sumaIncrementados));
+
+const promedio = numerosIncrementados / 7;
+console.log(promedio);
+//EJERICIO 3
+
+const numeros = [2, 5, 15, 7, 8];
+
+const numerosAlCudrado = numeros.map(function(x){
+    return Math.pow(x, 2);
+})
+
+console.log(numerosAlCudrado);
+
+//EJERCICIO 4
+
+const positivoNegativo = [ 1, -4, 12, 0, -3, 29, -150];
+
+const positivos = positivoNegativo.filter(positivoNegativo => positivoNegativo > 0);
+
+const suma = (accumulator, currentValue) => accumulator + currentValue;
+
+console.log(positivos.reduce(suma));
+
+// EJERCICIO 5
+
+const nombres = ["Florencia", "Lucas", "Ezequiel", "Matias", "Bruno", "Gustavo", "Martin"];
+
+const nombresLargos = nombres.filter(nombres => nombres.length > 6);
+console.log(nombresLargos);
+
 
 
