@@ -21,7 +21,7 @@ console.log(numerosRandom); //ESTO ME ROMPIO LA CABEZA!!!
 
 const dadoElArray = [1,2,3,4,5,6];
 
-// const recorreArray = arr => {    RECORRIDO CON CICLO WHILE
+// const recorreArray = arr => {    A) RECORRIDO CON CICLO WHILE
 //     let i = 0;
 //     while(i<=arr.length-1){
 //     console.log(arr[i])
@@ -35,7 +35,7 @@ const dadoElArray = [1,2,3,4,5,6];
 // recorreArray(dadoElArray);
 
 // const recorreArray = (arr) => {
-//     for(let i=0; i<=arr.length-1; i++){   RECORRIDO CON CICLO FOR
+//     for(let i=0; i<=arr.length-1; i++){   B) RECORRIDO CON CICLO FOR
 //     console.log(arr[i]);
 //         let ul = document.getElementById("recorridoArray")
 //         let li = document.createElement("li");
@@ -46,7 +46,7 @@ const dadoElArray = [1,2,3,4,5,6];
 // recorreArray(dadoElArray);
 
 
-const recorreArray = arr => arr.forEach(i => {  // RECORRIDO CON FOR EACH
+const recorreArray = arr => arr.forEach(i => {  // C) RECORRIDO CON FOR EACH
     console.log(i);
     let ul = document.getElementById("recorridoArray")
     let li = document.createElement("li");
@@ -56,16 +56,29 @@ const recorreArray = arr => arr.forEach(i => {  // RECORRIDO CON FOR EACH
 
 recorreArray(dadoElArray);
 
+//   D)
+
+
+
+//   E)
 const numerosIncrementados = dadoElArray.map(function(x) {
     return x + 1;
 })
 console.log(numerosIncrementados);
 
-const sumaIncrementados = (accumulator, currentValue) => accumulator + currentValue;
-console.log(numerosIncrementados.reduce(sumaIncrementados));
+//   F)
 
-const promedio = numerosIncrementados / 7;
-console.log(promedio);
+function promedio(arr) {
+    let suma = 0
+    for(i=0; i < arr.length; i++){
+        suma = suma + arr[i];
+    }
+    return suma/dadoElArray.length
+}
+
+console.log(promedio(numerosIncrementados));
+
+
 //EJERICIO 3
 
 const numeros = [2, 5, 15, 7, 8];
@@ -88,10 +101,23 @@ console.log(positivos.reduce(suma));
 
 // EJERCICIO 5
 
+// A)
+
 const nombres = ["Florencia", "Lucas", "Ezequiel", "Matias", "Bruno", "Gustavo", "Martin"];
 
 const nombresLargos = nombres.filter(nombres => nombres.length > 6);
 console.log(nombresLargos);
 
+// B) 
+
+const recorrerInciiales = (arr) => {
+    for(let i=0; i<=arr.length-1; i++){  
+    }
+    console.log(arr.filter(i => i[0]==="M"));
+}
+
+recorrerInciiales(nombres);
+
+// C)
 
 
