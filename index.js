@@ -120,4 +120,61 @@ recorrerInciiales(nombres);
 
 // C)
 
+const ordenAlfabetico = nombres.sort();
+console.log(ordenAlfabetico);
+
+// D)
+const mostrarIniciales = (arr) => arr.map((i) => i.charAt(0));
+const inciales = mostrarIniciales(nombres);
+console.log(inciales);
+
+// F)
+const convertirMayuscula = (arr) => arr.map((i) => i.toUpperCase());
+const mayusculas = convertirMayuscula(nombres);
+console.log(mayusculas);
+
+// G)
+const incialJ = numeros.some(i => i[0] === "J");
+console.log(incialJ);
+
+//EJERCICIO 6
+
+// const colores = ["azul", "amarillo", "rojo", "verde", "café", "rosa"];
+// const colorUsuario = prompt('Ingrese un color');
+//     if (colores.includes(colorUsuario)) {
+//         alert('El color forma parte del array');
+//     }
+//     else {
+//         alert('El color no forma parte del array');
+//     }
+
+// Lo comento para que no me moleste cuando entro a la pagina jeje/
+
+//EJERCICIO 7
+const numeros2 = [2, 10, 8, 5, 13];
+const encontrarNumerosPares = (arr) => arr.filter(i => i % 2 === 0);
+console.log(encontrarNumerosPares(numeros2));
+
+//EJERCICIO 8
+const palabras = ['Benedetto', 'Santiago', 'Davo', 'Arbol', 'Espacio']
+const incialVocal = palabras.filter(i => {
+    const primeraLetra = i.charAt(0).toLowerCase();
+    return primeraLetra === "a" || primeraLetra === "e" || primeraLetra === "i" || primeraLetra === "o" || primeraLetra === "u";
+})
+
+console.log(incialVocal);
+
+//EJERCICIO 9
+const ejercicio9 = ['Deep Purple', 'Black Sabbath', 'AC/DC','Arctic Monkeys', 'Green Day'];
+ejercicio9.splice(1, 1, 'Arctic Monkeys');
+ejercicio9.splice(3, 1, 'Black Sabbath');
+console.log(ejercicio9);
+
+//EJERCICIO 10
+
+
+
+
+
+
 
