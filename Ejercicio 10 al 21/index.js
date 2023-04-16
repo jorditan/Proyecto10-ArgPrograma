@@ -56,27 +56,32 @@ function presionFila1() {
 
 
 // // EJERCICIO 13
+function cambiarTam(n){
+  let variable='.'+n;
+  let texto1 = document.querySelector(variable);
+  
+  if (texto1.style.fontSize!="20px"){
+    texto1.style.fontSize="20px";
+  }else{
+    texto1.style.fontSize="16px";
+  }
+}
 
 
 
 // // EJERCICIO 14
+function borrarCeldas(){
+  let celdaId = "celda0";
 
-
-
-let borrador = $(document);
-borrador.ready(borrar);
-
-function borrar() {
-  let goma = $("#boton1");
-  goma.click(borrar1raTabla);
+  for (var i = 0; i<9; i++){
+    
+    let num = i.toString();
+    celdaId=celdaId.slice(0,5)+num+celdaId.slice(6);
+    let celda=document.getElementById(celdaId);
+    celda.innerHTML="-";
+    
+  }
 }
-
-function borrar1raTabla() {
-  let eliminar = $("#tabla1 td");
-  eliminar.text("-");
-}
-
-
 
 // // EJERCICIO 15
 
@@ -84,6 +89,7 @@ function borrar1raTabla() {
 
 let hiper = $(document);
 hiper.ready(cambiodehiper);
+
 
 function cambiodehiper() {
   let b1 = $("#boton11");
@@ -96,7 +102,7 @@ function cambiodehiper() {
 
 function hipervinculoGoogle() {
   let b11 = $("a");
-  b11.attr("href", "http://www.google.com");
+  b11.attr("href", nombres[1]);
   b11.text("Google");
 }
 
@@ -104,6 +110,7 @@ function hipervinculoYahoo() {
   let b22 = $("a");
   b22.attr("href", "http://www.yahoo.com");
   b22.text("Yahoo");
+  
 }
 
 function hipervinculoMsn() {
@@ -131,11 +138,19 @@ function ocultarPalabra() {
 
 
 // EJERCICIO 17
-
+function cambioBack(celda) {
+  celda.style.backgroundColor = "aqua";
+}
 
 
 // EJERCICIO 18
-
+function punto18(celda) {
+  if (celda.style.backgroundColor == "aqua") {
+    celda.style.backgroundColor = "";
+  } else {
+    celda.style.backgroundColor = "aqua";
+  }
+}
 
 
 // EJERCICIO 19
@@ -153,3 +168,33 @@ document.getElementById('modificar').addEventListener('dblclick', (e) => {
         tamano = 'grande'
     }
 })
+
+//Ejercicio 20
+var valorEnlace = document.getElementById("miLink").href;
+document.getElementById("miLink").addEventListener("click", function(event0){
+  event0.preventDefault()
+  console.log(valorEnlace)
+});
+
+//Ejercicio 21
+
+function enviarFormulario() {
+
+	let nombre = document.getElementById("nombre").value;
+	let apellido = document.getElementById("apellido").value;
+	let mensaje = document.getElementById("mensaje").value;
+  let parrafo=document.getElementById('textoFinal');
+  
+
+  parrafo.textContent='los valores ingresados son: '+nombre+' / '+apellido+' / '+mensaje;
+}
+
+
+
+
+
+
+
+
+
+
